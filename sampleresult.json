@@ -1,0 +1,611 @@
+{
+ "kind": "customsearch#search",
+ "url": {
+  "type": "application/json",
+  "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+ },
+ "queries": {
+  "nextPage": [
+   {
+    "title": "Google Custom Search - salsa",
+    "totalResults": "17700000",
+    "searchTerms": "salsa",
+    "count": 10,
+    "startIndex": 11,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "016061197282756370714:dideq4ruwdm"
+   }
+  ],
+  "request": [
+   {
+    "title": "Google Custom Search - salsa",
+    "totalResults": "17700000",
+    "searchTerms": "salsa",
+    "count": 10,
+    "startIndex": 1,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "016061197282756370714:dideq4ruwdm"
+   }
+  ]
+ },
+ "context": {
+  "title": "*.gulsahkandemir"
+ },
+ "searchInformation": {
+  "searchTime": 0.272093,
+  "formattedSearchTime": "0.27",
+  "totalResults": "17700000",
+  "formattedTotalResults": "17,700,000"
+ },
+ "items": [
+  {
+   "kind": "customsearch#result",
+   "title": "Salsa Cycles",
+   "htmlTitle": "\u003cb\u003eSalsa\u003c/b\u003e Cycles",
+   "link": "http://www.salsacycles.com/",
+   "displayLink": "www.salsacycles.com",
+   "snippet": "Product index, salsa recipes, catalog requests, mission statement and contact   information.",
+   "htmlSnippet": "Product index, \u003cb\u003esalsa\u003c/b\u003e recipes, catalog requests, mission statement and contact \u003cbr\u003e  information.",
+   "cacheId": "iu8RKtcK14UJ",
+   "formattedUrl": "www.salsacycles.com/",
+   "htmlFormattedUrl": "www.\u003cb\u003esalsa\u003c/b\u003ecycles.com/",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://www.salsacycles.com/files/bikes/thmb_bikes_Horsethief1_2013.png"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "131",
+      "height": "82",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSwj0nm2SiGzv93WWlr8BBzVlSBbHUitPZSaICiWkOuamGwP69_-CKkugo"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Salsa (dance) - Wikipedia, the free encyclopedia",
+   "htmlTitle": "\u003cb\u003eSalsa\u003c/b\u003e (dance) - Wikipedia, the free encyclopedia",
+   "link": "http://en.wikipedia.org/wiki/Salsa_(dance)",
+   "displayLink": "en.wikipedia.org",
+   "snippet": "Salsa is a dance form with origins from the Cuban Son (circa 1920s) and Afro-  Cuban dance (specifically Afro-Cuban Rumba (dance)).. It is generally   associated ...",
+   "htmlSnippet": "\u003cb\u003eSalsa\u003c/b\u003e is a dance form with origins from the Cuban Son (circa 1920s) and Afro-\u003cbr\u003e  Cuban dance (specifically Afro-Cuban Rumba (dance)).. It is generally \u003cbr\u003e  associated&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "o3Z0zPwHUMsJ",
+   "formattedUrl": "en.wikipedia.org/wiki/Salsa_(dance)",
+   "htmlFormattedUrl": "en.wikipedia.org/wiki/\u003cb\u003eSalsa\u003c/b\u003e_(dance)",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Salsa_en_Cali.jpg/200px-Salsa_en_Cali.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "160",
+      "height": "240",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr5mu3N-xx-xRzUBMEvY84tko-9rNGXVsPDXCIRBgQFh3XcyEO5xCGjGJJ"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Salsa Recipe : Alton Brown : Recipes : Food Network",
+   "htmlTitle": "\u003cb\u003eSalsa\u003c/b\u003e Recipe : Alton Brown : Recipes : Food Network",
+   "link": "http://www.foodnetwork.com/recipes/alton-brown/salsa-recipe/index.html",
+   "displayLink": "www.foodnetwork.com",
+   "snippet": "Aug 11, 2013 ... Get this all-star, easy-to-follow Food Network Salsa recipe from Alton Brown.",
+   "htmlSnippet": "Aug 11, 2013 \u003cb\u003e...\u003c/b\u003e Get this all-star, easy-to-follow Food Network \u003cb\u003eSalsa\u003c/b\u003e recipe from Alton Brown.",
+   "cacheId": "BJ0zJVN-LOQJ",
+   "formattedUrl": "www.foodnetwork.com/recipes/alton.../salsa.../index.html",
+   "htmlFormattedUrl": "www.foodnetwork.com/recipes/alton.../\u003cb\u003esalsa\u003c/b\u003e.../index.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://img.foodnetwork.com/FOOD/2011/04/07/EA1D01_alton-salsa_s4x3.jpg"
+     }
+    ],
+    "person": [
+     {
+      "image": "http://img.foodnetwork.com/FOOD/2008/08/13/av-alton-brown.jpg",
+      "url": "Recipe courtesy Alton Brown",
+      "name": "Alton Brown"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "259",
+      "height": "194",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVbGD6cOh4a_rRXBPdeiQWA8E0tPc9778UvkMg3GLnxv1qREu9qDwJjco"
+     }
+    ],
+    "aggregaterating": [
+     {
+      "ratingvalue": "5",
+      "reviewcount": "76"
+     }
+    ],
+    "tvepisode": [
+     {
+      "url": "Chile's Angels",
+      "name": "Chile's Angels"
+     }
+    ],
+    "recipe": [
+     {
+      "preptime": "20 min",
+      "cooktime": "15 min",
+      "ratingcount": "76",
+      "ratingstars": "5.0",
+      "image_url": "http://img.foodnetwork.com/FOOD/2011/04/07/EA1D01_alton-salsa_s4x3_med.jpg"
+     },
+     {
+      "datepublished": "2013-08-12",
+      "name": "Salsa",
+      "recipecategory": "Jalapeno",
+      "image": "http://img.foodnetwork.com/FOOD/2011/04/07/EA1D01_alton-salsa_s4x3_med.jpg",
+      "totaltime": "PT0H47M",
+      "preptime": "PT0H20M",
+      "cooktime": "PT0H15M",
+      "recipeyield": "4 to 6 sersvings",
+      "ingredients": "6 Roma tomatoes, chopped",
+      "recipeinstructions": "In a bowl, combine all ingredients. Place in refrigerator for up to 12 hours for flavor infusion. Serve with tortilla chips."
+     }
+    ],
+    "tvseries": [
+     {
+      "url": "Good Eats",
+      "name": "Good Eats"
+     }
+    ],
+    "hrecipe": [
+     {
+      "fn": "Salsa",
+      "photo": "http://img.foodnetwork.com/FOOD/2011/04/07/EA1D01_alton-salsa_s4x3_med.jpg",
+      "yield": "4 to 6 sersvings",
+      "author": "Alton Brown",
+      "published": "2013-08-12"
+     }
+    ],
+    "rating": [
+     {
+      "ratingvalue": "5"
+     },
+     {
+      "ratingvalue": "5"
+     },
+     {
+      "ratingvalue": "5"
+     }
+    ],
+    "metatags": [
+     {
+      "apple-itunes-app": "app-id=399072152",
+      "og:title": "Salsa",
+      "og:url": "http://www.foodnetwork.com/recipes/alton-brown/salsa-recipe/index.html?soc=sharingfb",
+      "og:type": "article",
+      "og:image": "http://img.foodnetwork.com/FOOD/2011/04/07/EA1D01_alton-salsa_s4x3.jpg"
+     }
+    ],
+    "moviereview": [
+     {
+      "name": "Good Eats"
+     }
+    ],
+    "review": [
+     {
+      "author": "bgear1",
+      "about": "item reviewed",
+      "datepublished": "August 11, 2013",
+      "reviewbody": "Next time add pablano peppers then it's a 5 star"
+     },
+     {
+      "author": "pinkandpinkandp...",
+      "about": "item reviewed",
+      "datepublished": "July 22, 2013",
+      "reviewbody": "I first tried this recipe two months ago. I made it per instructions, no modifications. Those dried chilis are fantastic and change the taste of the salsa until about the third day. I had about..."
+     },
+     {
+      "author": "pjd3",
+      "about": "item reviewed",
+      "datepublished": "July 19, 2013",
+      "reviewbody": "This is fantastic. We didn't find it too spicy, but I also did not add the dry ancho chilis (simply didn't have any on hand. The flavor is wonderful and I left out the chili powder as it just..."
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Fresh Tomato Salsa Recipe | Simply Recipes",
+   "htmlTitle": "Fresh Tomato \u003cb\u003eSalsa\u003c/b\u003e Recipe | Simply Recipes",
+   "link": "http://www.simplyrecipes.com/recipes/fresh_tomato_salsa/",
+   "displayLink": "www.simplyrecipes.com",
+   "snippet": "Aug 25, 2005 ... Mexican salsa recipe made with chopped fresh tomatoes, jalapeno and serano   chili peppers, red onion, cilantro, and lime. Also called Pico de ...",
+   "htmlSnippet": "Aug 25, 2005 \u003cb\u003e...\u003c/b\u003e Mexican \u003cb\u003esalsa\u003c/b\u003e recipe made with chopped fresh tomatoes, jalapeno and serano \u003cbr\u003e  chili peppers, red onion, cilantro, and lime. Also called Pico de&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "YzsN_vSMjsYJ",
+   "formattedUrl": "www.simplyrecipes.com/recipes/fresh_tomato_salsa/",
+   "htmlFormattedUrl": "www.simplyrecipes.com/recipes/fresh_tomato_\u003cb\u003esalsa\u003c/b\u003e/",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://www.simplyrecipes.com/wp-content/uploads/2005/08/fresh-tomato-salsa-266x200.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "212",
+      "height": "160",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTFL9TwsqzOv48-aVTuAYZy_oKSGQ76_C30q2xA0iM4mLvhmnNBcryHI3j"
+     }
+    ],
+    "recipe": [
+     {
+      "name": "Fresh Tomato Salsa",
+      "author": "Elise Bauer",
+      "datepublished": "2005-08-25",
+      "image": "http://www.simplyrecipes.com/wp-content/uploads/2005/08/fresh-tomato-salsa.jpg?ea6e46",
+      "description": "A standard and almost necessary accompaniment to most Mexican food is salsa. Salsa (meaning “sauce” in Spanish) comes in many different ways, the most common being chopped tomatoes, onions...",
+      "ingredients": "2-3 medium sized fresh tomatoes (from 1 lb to 1 1/2 lb), stems removed, finely diced",
+      "recipeinstructions": "1 Start with chopping up 2 medium sized fresh tomatoes. Prepare the chilies. Be very careful while handling these hot peppers. If you can, avoid touching them with your hands. Use a fork to...",
+      "interactioncount": "UserComments:42"
+     }
+    ],
+    "hrecipe": [
+     {
+      "fn": "Fresh Tomato Salsa",
+      "summary": "A standard and almost necessary accompaniment to most Mexican food is salsa. Salsa (meaning “sauce” in Spanish) comes in many different ways, the most common being chopped tomatoes, onions...",
+      "photo": "http://www.simplyrecipes.com/wp-content/uploads/2005/08/fresh-tomato-salsa.jpg?ea6e46",
+      "author": "Elise Bauer",
+      "published": "2005-08-25"
+     }
+    ],
+    "metatags": [
+     {
+      "og:site_name": "Simply Recipes",
+      "fb:app_id": "138323699531998",
+      "og:title": "Fresh Tomato Salsa",
+      "og:url": "http://www.simplyrecipes.com/recipes/fresh_tomato_salsa/",
+      "og:description": "Mexican salsa recipe made with chopped fresh tomatoes, jalapeno and serano chili peppers, red onion, cilantro, and lime.  Also called Pico de Gallo or Salsa Fresca.",
+      "og:image": "http://www.simplyrecipes.com/wp-content/uploads/2005/08/fresh-tomato-salsa-266x200.jpg",
+      "og:type": "article"
+     }
+    ],
+    "hcard": [
+     {
+      "fn": "Elise Bauer",
+      "url": "http://www.simplyrecipes.com/about/",
+      "url_text": "Elise Bauer"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Restaurant Style Salsa | The Pioneer Woman Cooks | Ree Drummond",
+   "htmlTitle": "Restaurant Style \u003cb\u003eSalsa\u003c/b\u003e | The Pioneer Woman Cooks | Ree Drummond",
+   "link": "http://thepioneerwoman.com/cooking/2010/01/restaurant-style-salsa/",
+   "displayLink": "thepioneerwoman.com",
+   "snippet": "Jan 27, 2010 ... Okay. Here's the situation: I am completely high maintenance when it comes to   salsa. Now, I'm not talking about Pico ...",
+   "htmlSnippet": "Jan 27, 2010 \u003cb\u003e...\u003c/b\u003e Okay. Here&#39;s the situation: I am completely high maintenance when it comes to \u003cbr\u003e  \u003cb\u003esalsa\u003c/b\u003e. Now, I&#39;m not talking about Pico ...",
+   "formattedUrl": "thepioneerwoman.com/cooking/2010/01/restaurant-style-salsa/",
+   "htmlFormattedUrl": "thepioneerwoman.com/cooking/2010/01/restaurant-style-\u003cb\u003esalsa\u003c/b\u003e/",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://static.thepioneerwoman.com/cooking/files/2010/01/salsa2.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "275",
+      "height": "183",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRgDGme6SBgVzlJPt5rsShkUBV13ZaE91K83SC_ijwmnf3NrvlFw_nM2Rc"
+     }
+    ],
+    "recipe": [
+     {
+      "preptime": "10 min",
+      "totaltime": "10 min",
+      "image_url": "http://tastykitchen.com/recipes/files/2010/01/TPW_5376-420x280.jpg"
+     },
+     {
+      "name": "Restaurant Style Salsa",
+      "preptime": "PT10M",
+      "cooktime": "PT",
+      "yield": "12",
+      "photo": "http://tastykitchen.com/recipes/files/2010/01/TPW_5376-420x280.jpg",
+      "instructions": "Note: this is a very large batch. Recommend using a 12-cup food processor, or you can process the ingredients in batches and then mix everything together in a large mixing bowl. Combine whole...",
+      "author": "Ree",
+      "published": "January 27 2010"
+     }
+    ],
+    "recipeingredient": [
+     {
+      "amount": "1 can",
+      "name": "(28 Ounce) Whole Tomatoes With Juice"
+     },
+     {
+      "amount": "2 cans",
+      "name": "(10 Ounce) Rotel (diced Tomatoes And Green Chilies)"
+     },
+     {
+      "amount": "1/4 cup",
+      "name": "Chopped Onion"
+     },
+     {
+      "amount": "1 clove",
+      "name": "Garlic, Minced"
+     },
+     {
+      "amount": "1 whole",
+      "name": "Jalapeno, Quartered And Sliced Thin"
+     },
+     {
+      "amount": "1/4 teaspoon",
+      "name": "Sugar"
+     },
+     {
+      "amount": "1/4 teaspoon",
+      "name": "Salt"
+     },
+     {
+      "amount": "1/4 teaspoon",
+      "name": "Ground Cumin"
+     },
+     {
+      "amount": "1/2 cup",
+      "name": "Cilantro (more To Taste!)"
+     },
+     {
+      "amount": "1/2 whole",
+      "name": "Lime Juice"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1",
+      "title": "Restaurant Style Salsa",
+      "og:title": "Restaurant Style Salsa",
+      "og:description": "Okay. Here's the situation:     I am completely high maintenance when it comes to salsa.     Now, I'm not talking about Pico ...",
+      "og:url": "http://thepioneerwoman.com/cooking/2010/01/restaurant-style-salsa/",
+      "og:image": "http://static.thepioneerwoman.com/cooking/files/2010/01/salsa2.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Salsa: Nonprofit Management Software, Online Fundraising Software",
+   "htmlTitle": "\u003cb\u003eSalsa\u003c/b\u003e: Nonprofit Management Software, Online Fundraising Software",
+   "link": "https://www.salsalabs.com/",
+   "displayLink": "www.salsalabs.com",
+   "snippet": "The Salsa Platform is nonprofit management software that helps nonprofits   succeed with tools like online fundraising, communications, advocacy, social   media, ...",
+   "htmlSnippet": "The \u003cb\u003eSalsa\u003c/b\u003e Platform is nonprofit management software that helps nonprofits \u003cbr\u003e  succeed with tools like online fundraising, communications, advocacy, social \u003cbr\u003e  media,&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "o_piUKZL3WoJ",
+   "formattedUrl": "https://www.salsalabs.com/",
+   "htmlFormattedUrl": "https://www.\u003cb\u003esalsa\u003c/b\u003elabs.com/",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "https://dp-prod-sli-01.s3.amazonaws.com/homepage-campaign/normal/slide-3_0.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "367",
+      "height": "137",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ8cB8ZIxB_Gzf5vohC7iIR5z5xPKlaLitHhijwHqLXegBzxyedJzIBTAI"
+     }
+    ],
+    "metatags": [
+     {
+      "p:domain_verify": "1162ccea216c1b02ab32f76d8eb56830",
+      "viewport": "width=device-width"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Salsa Recipes - Allrecipes.com",
+   "htmlTitle": "\u003cb\u003eSalsa\u003c/b\u003e Recipes - Allrecipes.com",
+   "link": "http://allrecipes.com/recipes/appetizers-and-snacks/dips-and-spreads/salsa/",
+   "displayLink": "allrecipes.com",
+   "snippet": "The best salsa recipes. Get classic tomato salsa, plus corn, black bean, mango,   and more. Dip your chips in homemade freshness!",
+   "htmlSnippet": "The best \u003cb\u003esalsa\u003c/b\u003e recipes. Get classic tomato \u003cb\u003esalsa\u003c/b\u003e, plus corn, black bean, mango, \u003cbr\u003e  and more. Dip your chips in homemade freshness!",
+   "cacheId": "4rnsotNJfpUJ",
+   "formattedUrl": "allrecipes.com/recipes/appetizers-and-snacks/dips-and.../salsa/",
+   "htmlFormattedUrl": "allrecipes.com/recipes/appetizers-and-snacks/dips-and.../\u003cb\u003esalsa\u003c/b\u003e/",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://images.media-allrecipes.com/images/51530.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCl6BiFa744GOwYEtZeiAArZRTvpglctAzYMDvbK-Jdk1rNYswex4uU-IU"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1, maximum-scale=2",
+      "og:site_name": "Allrecipes.com",
+      "fb:app_id": "66102450266",
+      "msapplication-starturl": "http://allrecipes.com/",
+      "application-name": "Allrecipes.com",
+      "msapplication-tileimage": "http://allrecipes.com/AR_favicon_144x144.png",
+      "msapplication-tilecolor": "#737477",
+      "msapplication-square150x150logo": "http://allrecipes.com/AR_favicon_310x310.png",
+      "msapplication-square70x70logo": "http://allrecipes.com/AR_favicon_128x128.png",
+      "msapplication-task": "name=Home;action-uri=http://allrecipes.com/;icon-uri=http://allrecipes.com/favicon.ico"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Fresh Salsa Recipe",
+   "htmlTitle": "Fresh \u003cb\u003eSalsa\u003c/b\u003e Recipe",
+   "link": "http://southernfood.about.com/od/salsarecipes/r/bl40212k.htm",
+   "displayLink": "southernfood.about.com",
+   "snippet": "This fresh tomato salsa recipe is made with ripe tomatoes, serrano chile peppers   or jalapeno peppers, chopped onion, garlic, cilantro, and lime juice. A delicious ...",
+   "htmlSnippet": "This fresh tomato \u003cb\u003esalsa\u003c/b\u003e recipe is made with ripe tomatoes, serrano chile peppers \u003cbr\u003e  or jalapeno peppers, chopped onion, garlic, cilantro, and lime juice. A delicious&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "4FiLnyfeCIIJ",
+   "formattedUrl": "southernfood.about.com/od/salsarecipes/r/bl40212k.htm",
+   "htmlFormattedUrl": "southernfood.about.com/od/\u003cb\u003esalsa\u003c/b\u003erecipes/r/bl40212k.htm",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://0.tqn.com/d/southernfood/1/I/5/g/3/87993454_9.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "134",
+      "height": "167",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTZPDfuKL3ihwG1Awx1Mml9mmILvt1O_ETe5-hZs1wr4vREzMMcQoOGwzU"
+     }
+    ],
+    "recipe": [
+     {
+      "ratingcount": "7",
+      "ratingstars": "3.5",
+      "image_url": "http://0.tqn.com/d/southernfood/1/I/5/g/3/87993454_9.jpg"
+     }
+    ],
+    "hrecipe": [
+     {
+      "fn": "Fresh Salsa Recipe",
+      "summary": "A delicious salsa recipe made with fresh ingredients.",
+      "photo": "http://0.tqn.com/d/southernfood/1/I/5/g/3/87993454_9.jpg",
+      "author": "Diana Rattray, About.com Guide"
+     }
+    ],
+    "metatags": [
+     {
+      "pd": "Wednesday, 17-Jul-2013 10:14:05 UTC",
+      "og:title": "Fresh Salsa Recipe",
+      "og:type": "article",
+      "og:image": "http://0.tqn.com/d/southernfood/1/I/5/g/3/87993454_9.jpg",
+      "og:url": "http://southernfood.about.com/od/salsarecipes/r/bl40212k.htm",
+      "og:site_name": "About.com Southern Food",
+      "fb:app_id": "121030274606741"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Salsa Music Video Mix - YouTube",
+   "htmlTitle": "\u003cb\u003eSalsa\u003c/b\u003e Music Video Mix - YouTube",
+   "link": "http://www.youtube.com/watch?v=Mv1ZsSrE03o",
+   "displayLink": "www.youtube.com",
+   "snippet": "Dec 19, 2006 ... here is a salsa video i did of most of the salsa movies i had available thanks to   my gf Maria :) :) song was suggested by my friend claudia ...",
+   "htmlSnippet": "Dec 19, 2006 \u003cb\u003e...\u003c/b\u003e here is a \u003cb\u003esalsa\u003c/b\u003e video i did of most of the \u003cb\u003esalsa\u003c/b\u003e movies i had available thanks to \u003cbr\u003e  my gf Maria :) :) song was suggested by my friend claudia&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "ycTI4b8VNOQJ",
+   "formattedUrl": "www.youtube.com/watch?v=Mv1ZsSrE03o",
+   "htmlFormattedUrl": "www.youtube.com/watch?v=Mv1ZsSrE03o",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://i1.ytimg.com/vi/Mv1ZsSrE03o/hqdefault.jpg?feature=og"
+     }
+    ],
+    "videoobject": [
+     {
+      "url": "http://www.youtube.com/watch?v=Mv1ZsSrE03o",
+      "name": "Salsa Music Video Mix",
+      "description": "here is a salsa video i did of most of the salsa movies i had available thanks to my gf Maria :) :) song was suggested by my friend claudia , ENJOY :) song i...",
+      "paid": "False",
+      "channelid": "UCykGpW0TMuyGGj78C5YJWrA",
+      "videoid": "Mv1ZsSrE03o",
+      "duration": "PT3M45S",
+      "unlisted": "False",
+      "thumbnailurl": "http://i1.ytimg.com/vi/Mv1ZsSrE03o/hqdefault.jpg",
+      "embedurl": "http://www.youtube.com/v/Mv1ZsSrE03o?autohide=1&version=3",
+      "playertype": "Flash",
+      "width": "480",
+      "height": "360",
+      "isfamilyfriendly": "False",
+      "regionsallowed": "AD,AE,AF,AG,AI,AL,AM,AO,AQ,AR,AS,AT,AU,AW,AX,AZ,BA,BB,BD,BE,BF,BG,BH,BI,BJ,BL,BM,BN,BO,BQ,BR,BS,BT,BV,BW,BY,BZ,CA,CC,CD,CF,CG,CH,CI,CK,CL,CM,CN,CO,CR,CU,CV,CW,CX,CY,CZ,DE,DJ,DK,DM,DO,DZ,EC,EE,EG,EH..."
+     }
+    ],
+    "person": [
+     {
+      "url": "http://www.youtube.com/user/cz1280"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "259",
+      "height": "194",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQg9hdNlDzabjpnOpwApzy4h-X8hJ4Y3KDX5AWk0ejKBt4tGBBxCJ6PtZ1a"
+     }
+    ],
+    "metatags": [
+     {
+      "title": "Salsa Music Video Mix",
+      "og:site_name": "YouTube",
+      "og:url": "http://www.youtube.com/watch?v=Mv1ZsSrE03o",
+      "og:title": "Salsa Music Video Mix",
+      "og:type": "video",
+      "og:image": "http://i1.ytimg.com/vi/Mv1ZsSrE03o/hqdefault.jpg?feature=og",
+      "og:description": "here is a salsa video i did of most of the salsa movies i had available thanks to my gf Maria :) :) song was suggested by my friend claudia , ENJOY :) song i...",
+      "og:video": "http://www.youtube.com/v/Mv1ZsSrE03o?autohide=1&version=3",
+      "og:video:type": "application/x-shockwave-flash",
+      "og:video:width": "480",
+      "og:video:height": "360",
+      "fb:app_id": "87741124305",
+      "og:restrictions:age": "18+",
+      "twitter:card": "player",
+      "twitter:site": "@youtube",
+      "twitter:url": "http://www.youtube.com/watch?v=Mv1ZsSrE03o",
+      "twitter:title": "Salsa Music Video Mix",
+      "twitter:description": "here is a salsa video i did of most of the salsa movies i had available thanks to my gf Maria :) :) song was suggested by my friend claudia , ENJOY :) song i...",
+      "twitter:image": "http://i1.ytimg.com/vi/Mv1ZsSrE03o/hqdefault.jpg",
+      "twitter:app:name:iphone": "YouTube",
+      "twitter:app:id:iphone": "544007664",
+      "twitter:app:name:ipad": "YouTube",
+      "twitter:app:id:ipad": "544007664",
+      "twitter:app:url:iphone": "vnd.youtube://watch/Mv1ZsSrE03o",
+      "twitter:app:url:ipad": "vnd.youtube://watch/Mv1ZsSrE03o",
+      "twitter:app:name:googleplay": "YouTube",
+      "twitter:app:id:googleplay": "com.google.android.youtube",
+      "twitter:app:url:googleplay": "http://www.youtube.com/watch?v=Mv1ZsSrE03o",
+      "twitter:player": "https://www.youtube.com/embed/Mv1ZsSrE03o",
+      "twitter:player:width": "480",
+      "twitter:player:height": "360"
+     }
+    ],
+    "imageobject": [
+     {
+      "url": "http://i1.ytimg.com/vi/Mv1ZsSrE03o/hqdefault.jpg",
+      "width": "320",
+      "height": "180"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Salsa",
+   "htmlTitle": "\u003cb\u003eSalsa\u003c/b\u003e",
+   "link": "http://www.gpb.org/salsa",
+   "displayLink": "www.gpb.org",
+   "snippet": "Teach Young Children Spanish with Salsa! Salsa is Georgia Public   Broadcasting's award-winning Spanish language series for young learners in   kindergarten ...",
+   "htmlSnippet": "Teach Young Children Spanish with \u003cb\u003eSalsa\u003c/b\u003e! \u003cb\u003eSalsa\u003c/b\u003e is Georgia Public \u003cbr\u003e  Broadcasting&#39;s award-winning Spanish language series for young learners in \u003cbr\u003e  kindergarten&nbsp;\u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "A7TPbY3LxrUJ",
+   "formattedUrl": "www.gpb.org/salsa",
+   "htmlFormattedUrl": "www.gpb.org/\u003cb\u003esalsa\u003c/b\u003e"
+  }
+ ]
+}

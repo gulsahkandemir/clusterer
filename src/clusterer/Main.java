@@ -2,14 +2,16 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package cluster;
+package clusterer;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.StringReader;
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -23,11 +25,11 @@ import javax.swing.text.html.HTML;
 import javax.swing.text.html.HTMLEditorKit;
 import javax.swing.text.html.parser.ParserDelegator;
 import org.tartarus.snowball.ext.englishStemmer;
-import utility.Clusterer;
-import utility.Snippet;
-import utility.StopWord;
-import utility.TrieNode;
-import utility.WordSuffixTree;
+import org.apache.commons.codec.binary.Base64;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+
 
 /**
  *
@@ -35,6 +37,7 @@ import utility.WordSuffixTree;
  */
 public class Main {
 
+    //git test
     static boolean isSnippet = false;
     static ArrayList<String> tempSnipArray = new ArrayList<String>();
     public static ArrayList<Snippet> snipArray = new ArrayList<Snippet>();
@@ -44,20 +47,30 @@ public class Main {
      */
     public static void main(String[] args) throws IOException, BadLocationException {
         try {
-            String link = "https://www.google.com/search?hl=en&ie=UTF-8&q="+args[0]+"&num=200";
-            URL url = new URL(link);
-            URLConnection urlConnection = url.openConnection();
-            urlConnection.setRequestProperty("User-Agent", "Mozilla/5.0 (X11; U; Linux x86_64; en-GB; rv:1.8.1.6) Gecko/20070723 Iceweasel/2.0.0.6 (Debian-2.0.0.6-0etch1)");
+            String queryString = "salsa";
+            URL url = new URL ("https://api.datamarket.azure.com/Bing/Search/v1/Web?Query=%27"+queryString+"%27&$format=json");
+            String auth =  Config.BING_ACCOUNT_KEY + ":" + Config.BING_ACCOUNT_KEY;
+            String encoding = Base64.encodeBase64String(auth.getBytes());
+
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+            connection.setDoOutput(true);
+            connection.setRequestProperty("Authorization", "Basic " + encoding);
+            InputStream content = (InputStream)connection.getInputStream();
+            BufferedReader in   = 
+                new BufferedReader (new InputStreamReader (content));
+            String line;
             
-            BufferedReader in = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
-            String inputLine;
-            StringBuilder strBuild = new StringBuilder();
-            while ((inputLine = in.readLine()) != null) {
-                strBuild.append(inputLine);
+            StringBuilder stringBuilder = new StringBuilder();
+            while ((line = in.readLine()) != null) {
+                stringBuilder.append(line);
             }
             in.close();
-            String resultString = strBuild.toString();
-            parseResult(resultString);
+            String resultString = stringBuilder.toString();
+            
+            JSONObject jsonObject = new JSONObject(resultString);
+           
+            parseResult(jsonObject);
 
             /*
              * Start stemming
@@ -93,10 +106,12 @@ public class Main {
                     }
                 }
             }
-
-            for (int i = 0; i < snipArray.size(); i++) {
-                System.out.println(i + "   " + snipArray.get(i).getStemmedWords());
-            }
+            /** 
+             * DEBUG : Print the list of stemmed words
+             */
+//            for (int i = 0; i < snipArray.size(); i++) {
+//                System.out.println(i + "   " + snipArray.get(i).getStemmedWords());
+//            }
 
             /**
              * Build up suffix tree
@@ -122,34 +137,13 @@ public class Main {
 
     }
 
-    private static void parseResult(String resultString) throws FileNotFoundException, IOException {
-        // Get the factory
-        HTMLEditorKit.ParserCallback callback =
-                new HTMLEditorKit.ParserCallback() {
-
-                    String tempSnip = "";
-
-                    @Override
-                    public void handleText(char[] data, int pos) {
-                        if (isSnippet == true) {
-                            tempSnip = tempSnip + new String(data);
-                        }
-                    }
-
-                    @Override
-                    public void handleStartTag(HTML.Tag t, MutableAttributeSet a, int pos) {
-                        if (t.toString().equals("div") && a.getAttribute(HTML.Attribute.CLASS) != null && (a.getAttribute(HTML.Attribute.CLASS).toString().equals("s") || a.getAttribute(HTML.Attribute.CLASS).toString().equals("s hc"))) {
-                            isSnippet = true;
-                        }
-                        if (t == HTML.Tag.CITE) {
-                            isSnippet = false;
-                            tempSnipArray.add(tempSnip);
-                            tempSnip = "";
-                        }
-                    }
-                };
-        Reader reader = new StringReader(resultString);
-        new ParserDelegator().parse(reader, callback, true);
+    private static void parseResult(JSONObject resultObject) throws FileNotFoundException, IOException {
+        
+        JSONArray resultArray = resultObject.getJSONObject("d").getJSONArray("results");
+        
+        for(int i=0; i<resultArray.length(); i++){
+            tempSnipArray.add(resultArray.getJSONObject(i).get("Description").toString());
+        }  
 
         for (int i = 0; i < tempSnipArray.size(); i++) {
             String[] tempSplitted = tempSnipArray.get(i).toLowerCase().replaceAll("[^A-Za-z ]", "").split(" ");

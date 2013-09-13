@@ -1,5 +1,6 @@
-package utility;
+package clusterer;
 
+import clusterer.Cluster;
 import libs.Combinator;
 import java.util.ArrayList;
 
@@ -34,9 +35,11 @@ public class Clusterer {
             }
         }
 
+        System.out.println("BASE CLUSTERS----------------------------");
         for(int k=0;k<baseClusters.size();k++){
             System.out.println(k+" "+baseClusters.get(k).name+"\t" +baseClusters.get(k).docList.toString());
         }
+        System.out.println("-----------------------------------------");
     }
 
     public void traverseTree(TrieNode node, String parentName,String edgeName){
@@ -102,9 +105,11 @@ public class Clusterer {
         }
         
         // Print final list
+        System.out.println("FINAL CLUSTERS--------------------------");
         for(int i=0;i<finalList.size();i++){
             System.out.println((finalList.get(i).toString()));
         }
+        System.out.println("----------------------------------------");
 
     }
 
