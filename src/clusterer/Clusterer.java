@@ -46,10 +46,13 @@ public class Clusterer {
 
         if(node.docList.size() >=2){
             String name = parentName+ edgeName;
-
-            Cluster newCluster = new Cluster(name,
-                                    (ArrayList<Integer>) node.docList.clone());
-            baseClusters.add(newCluster);
+            
+            //if name is empty, just skip the clustering with that name
+            if(!name.equals("")){
+                Cluster newCluster = new Cluster(name,
+                                        (ArrayList<Integer>) node.docList.clone());
+                baseClusters.add(newCluster);
+            }
             for(int ch = 0;ch<node.children.size();ch++){
                 String edge = "";
                 //int ed=0;
@@ -110,7 +113,48 @@ public class Clusterer {
             System.out.println((finalList.get(i).toString()));
         }
         System.out.println("----------------------------------------");
+        
+//       
+//        
+//        // Print final list
+//        System.out.println("SORTED CLUSTERS--------------------------");
+//        for(int i=0;i<finalList.size();i++){
+//            System.out.println((finalList.get(i).toString()));
+//        }
+//        System.out.println("----------------------------------------");
 
+    }
+    
+    public void sortFinalClusters(){
+        for(int i=0;i<finalList.size();i++){
+            
+            int numOfDocsInIthFinalCluster = 0;
+            for(Integer clusterId : finalList.get(i)){
+                numOfDocsInIthFinalCluster += baseClusters.get(clusterId).docList.size();
+            }
+            
+            int currentMaxFinalClusterIndex = i;
+            int currentMaxNumOfDocs = numOfDocsInIthFinalCluster;
+            
+            for(int j=i+1;j<finalList.size();j++){
+                int numOfDocsInJthFinalCluster = 0;
+                for(Integer clusterId : finalList.get(j)){
+                    numOfDocsInJthFinalCluster += baseClusters.get(clusterId).docList.size();
+                }
+                
+                if(numOfDocsInJthFinalCluster > currentMaxNumOfDocs){
+                    currentMaxFinalClusterIndex = j;
+                    currentMaxNumOfDocs = numOfDocsInJthFinalCluster;
+                }
+            }
+            
+            if(i != currentMaxFinalClusterIndex){
+                ArrayList<Integer> tmpFinalCluster = finalList.get(i);
+                finalList.set(i, finalList.get(currentMaxFinalClusterIndex));
+                finalList.set(currentMaxFinalClusterIndex, tmpFinalCluster);
+            }
+            
+        }
     }
 
     private void findConnectedComponents(int i, ArrayList<Integer> aFinalList) {

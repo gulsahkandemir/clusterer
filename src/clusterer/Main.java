@@ -9,21 +9,14 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.text.BadLocationException;
-import javax.swing.text.MutableAttributeSet;
-import javax.swing.text.html.HTML;
-import javax.swing.text.html.HTMLEditorKit;
-import javax.swing.text.html.parser.ParserDelegator;
 import org.tartarus.snowball.ext.englishStemmer;
 import org.apache.commons.codec.binary.Base64;
 import org.json.JSONArray;
@@ -129,6 +122,42 @@ public class Main {
              * Connect base clusters
              */
             clusterer.connectBaseClusters();
+            
+            /*
+             * Sort the final clusters, biggest sets on front
+             */
+            clusterer.sortFinalClusters();
+            
+            
+//        
+        // Print final list
+        System.out.println("SORTED CLUSTERS--------------------------");
+        for(int i=0;i<clusterer.finalList.size();i++){
+            System.out.println((clusterer.finalList.get(i).toString()));
+        }
+        System.out.println("----------------------------------------");
+
+            
+        /*
+         * Print out the urls and descriptions of search result snippets
+         * in a clustered groups
+         */
+        System.out.println("CLUSTERS AND CONTENTS-------------------------");
+        for(int i=0;i<clusterer.finalList.size();i++ ){
+           System.out.print(i + " the cluster keywords: ");
+           for(Integer clusterId : clusterer.finalList.get(i)){
+               System.out.print(clusterer.baseClusters.get(clusterId).name + ", ");
+            }
+
+           for(Integer clusterId : clusterer.finalList.get(i)){
+               for(Integer resultId : clusterer.baseClusters.get(clusterId).docList){
+                System.out.println("\t Url: " + snipArray.get(resultId).getUrl());
+                System.out.println("\t Description: " + snipArray.get(resultId).getDescription());
+
+               }
+            }
+
+        }
 
 
         } catch (MalformedURLException ex) {
@@ -142,16 +171,22 @@ public class Main {
         JSONArray resultArray = resultObject.getJSONObject("d").getJSONArray("results");
         
         for(int i=0; i<resultArray.length(); i++){
-            tempSnipArray.add(resultArray.getJSONObject(i).get("Description").toString());
-        }  
-
-        for (int i = 0; i < tempSnipArray.size(); i++) {
-            String[] tempSplitted = tempSnipArray.get(i).toLowerCase().replaceAll("[^A-Za-z ]", "").split(" ");
+            String description = resultArray.getJSONObject(i).get("Description").toString();
+            String url = resultArray.getJSONObject(i).get("Url").toString();
+            String[] tempSplitted = description.toLowerCase().replaceAll("[^A-Za-z ]", "").split(" ");
             ArrayList<String> tempOrigWords = new ArrayList<String>(Arrays.asList(tempSplitted));
-
-            Snippet newSnippet = new Snippet();
-            newSnippet.setOrigWords((ArrayList<String>) tempOrigWords.clone());
+            Snippet newSnippet = new Snippet(tempOrigWords, url, description);
             snipArray.add(newSnippet);
-        }
+
+        }  
+//
+//        for (int i = 0; i < tempSnipArray.size(); i++) {
+//            String[] tempSplitted = tempSnipArray.get(i).toLowerCase().replaceAll("[^A-Za-z ]", "").split(" ");
+//            ArrayList<String> tempOrigWords = new ArrayList<String>(Arrays.asList(tempSplitted));
+//
+//            Snippet newSnippet = new Snippet();
+//            newSnippet.setOrigWords((ArrayList<String>) tempOrigWords.clone());
+//            snipArray.add(newSnippet);
+//        }
     }
 }
