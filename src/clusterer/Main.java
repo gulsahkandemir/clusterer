@@ -40,28 +40,13 @@ public class Main {
      */
     public static void main(String[] args) throws IOException, BadLocationException {
         try {
-            String queryString = "salsa";
-            URL url = new URL ("https://api.datamarket.azure.com/Bing/Search/v1/Web?Query=%27"+queryString+"%27&$format=json");
-            String auth =  Config.BING_ACCOUNT_KEY + ":" + Config.BING_ACCOUNT_KEY;
-            String encoding = Base64.encodeBase64String(auth.getBytes());
-
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setRequestMethod("GET");
-            connection.setDoOutput(true);
-            connection.setRequestProperty("Authorization", "Basic " + encoding);
-            InputStream content = (InputStream)connection.getInputStream();
-            BufferedReader in   = 
-                new BufferedReader (new InputStreamReader (content));
-            String line;
+            //Get the desired SearchEngine instance from the args[0] parameter.
+            SearchEngine searchEngine =  SearchEngineFactory.startEngine(SearchEngineType.valueOf(args[0]));
             
-            StringBuilder stringBuilder = new StringBuilder();
-            while ((line = in.readLine()) != null) {
-                stringBuilder.append(line);
-            }
-            in.close();
-            String resultString = stringBuilder.toString();
+            //Get the search result of thw query
+            String searchResult = searchEngine.search(args[1]);
             
-            JSONObject jsonObject = new JSONObject(resultString);
+            JSONObject jsonObject = new JSONObject(searchResult);
            
             parseResult(jsonObject);
 
