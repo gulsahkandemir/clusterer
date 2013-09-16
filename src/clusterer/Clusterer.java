@@ -10,15 +10,55 @@ import java.util.ArrayList;
  */
 public class Clusterer {
     
-    public TrieNode suffixRoot;
-    public ArrayList<Cluster> baseClusters;
-    boolean[][] edgeTable;
-    public boolean[] visited;
-    ArrayList<ArrayList<Integer>> finalList;
+    private TrieNode suffixRoot;
+    private ArrayList<Cluster> baseClusters;
+    private boolean[][] edgeTable;
+    private boolean[] visited;
+    private ArrayList<ArrayList<Integer>> finalList;
 
     public Clusterer(TrieNode suffixRoot) {
         this.suffixRoot = suffixRoot;
         baseClusters = new ArrayList<Cluster>();
+    }
+
+    public TrieNode getSuffixRoot() {
+        return suffixRoot;
+    }
+
+    public void setSuffixRoot(TrieNode suffixRoot) {
+        this.suffixRoot = suffixRoot;
+    }
+
+    public ArrayList<Cluster> getBaseClusters() {
+        return baseClusters;
+    }
+
+    public void setBaseClusters(ArrayList<Cluster> baseClusters) {
+        this.baseClusters = baseClusters;
+    }
+
+    public boolean[][] getEdgeTable() {
+        return edgeTable;
+    }
+
+    public void setEdgeTable(boolean[][] edgeTable) {
+        this.edgeTable = edgeTable;
+    }
+
+    public boolean[] getVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean[] visited) {
+        this.visited = visited;
+    }
+
+    public ArrayList<ArrayList<Integer>> getFinalList() {
+        return finalList;
+    }
+
+    public void setFinalList(ArrayList<ArrayList<Integer>> finalList) {
+        this.finalList = finalList;
     }
 
     public void identifyBaseClusters() {
@@ -28,52 +68,54 @@ public class Clusterer {
         }
         for(int a=0;a<baseClusters.size();a++){
             for(int st=0;st<StopWord.stopWords.length;st++){
-                if(baseClusters.get(a).name.trim().equalsIgnoreCase(StopWord.stopWords[st])){
+                if(baseClusters.get(a).getName().trim().equalsIgnoreCase(StopWord.stopWords[st])){
                     //System.out.print(baseClusters.get(a).name);
                     baseClusters.remove(a--);
                 }
             }
         }
-
+        /*
+         * 
+         */
         System.out.println("BASE CLUSTERS----------------------------");
         for(int k=0;k<baseClusters.size();k++){
-            System.out.println(k+" "+baseClusters.get(k).name+"\t" +baseClusters.get(k).docList.toString());
+            System.out.println(k+" "+baseClusters.get(k).getName()+"\t" +baseClusters.get(k).getDocList().toString());
         }
         System.out.println("-----------------------------------------");
     }
 
     public void traverseTree(TrieNode node, String parentName,String edgeName){
 
-        if(node.docList.size() >=2){
+        if(node.getDocList().size() >=2){
             String name = parentName+ edgeName;
             
             //if name is empty, just skip the clustering with that name
             if(!name.equals("")){
                 Cluster newCluster = new Cluster(name,
-                                        (ArrayList<Integer>) node.docList.clone());
+                                        (ArrayList<Integer>) node.getDocList().clone());
                 baseClusters.add(newCluster);
             }
-            for(int ch = 0;ch<node.children.size();ch++){
+            for(int ch = 0;ch<node.getChildren().size();ch++){
                 String edge = "";
                 //int ed=0;
-                for(int ed=0;ed<node.edges.get(ch).size();ed++)
-                    edge += node.edges.get(ch).get(ed)+" ";
+                for(int ed=0;ed<node.getEdges().get(ch).size();ed++)
+                    edge += node.getEdges().get(ch).get(ed)+" ";
 
-                traverseTree(node.children.get(ch),name,edge);
+                traverseTree(node.getChildren().get(ch),name,edge);
             }
         }
     }
 
     public boolean isSimilar(Cluster a, Cluster b){
         double numIntersectionsAB = 0;
-        for(int i=0;i<a.docList.size();i++){
-            for(int j=0;j<b.docList.size();j++){
-                if(a.docList.get(i) == b.docList.get(j))
+        for(int i=0;i<a.getDocList().size();i++){
+            for(int j=0;j<b.getDocList().size();j++){
+                if(a.getDocList().get(i) == b.getDocList().get(j))
                     numIntersectionsAB++;
             }
         }
-        if(numIntersectionsAB > (a.docList.size()/2.0) && 
-                numIntersectionsAB > b.docList.size()/2.0){
+        if(numIntersectionsAB > (a.getDocList().size()/2.0) && 
+                numIntersectionsAB > b.getDocList().size()/2.0){
             return true;
         }
         return false;
@@ -130,7 +172,7 @@ public class Clusterer {
             
             int numOfDocsInIthFinalCluster = 0;
             for(Integer clusterId : finalList.get(i)){
-                numOfDocsInIthFinalCluster += baseClusters.get(clusterId).docList.size();
+                numOfDocsInIthFinalCluster += baseClusters.get(clusterId).getDocList().size();
             }
             
             int currentMaxFinalClusterIndex = i;
@@ -139,7 +181,7 @@ public class Clusterer {
             for(int j=i+1;j<finalList.size();j++){
                 int numOfDocsInJthFinalCluster = 0;
                 for(Integer clusterId : finalList.get(j)){
-                    numOfDocsInJthFinalCluster += baseClusters.get(clusterId).docList.size();
+                    numOfDocsInJthFinalCluster += baseClusters.get(clusterId).getDocList().size();
                 }
                 
                 if(numOfDocsInJthFinalCluster > currentMaxNumOfDocs){

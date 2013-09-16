@@ -8,15 +8,39 @@ import java.util.ArrayList;
  */
 public class TrieNode {
 
-    public ArrayList<Integer> docList;
-    public ArrayList<TrieNode> children;
-    public ArrayList<ArrayList<String>> edges;
+    private ArrayList<Integer> docList;
+    private ArrayList<TrieNode> children;
+    private ArrayList<ArrayList<String>> edges;
 
     public TrieNode() {
         children = new ArrayList<TrieNode>();
         docList = new ArrayList<Integer>();
         edges = new ArrayList<ArrayList<String>>();
 
+    }
+
+    public ArrayList<Integer> getDocList() {
+        return docList;
+    }
+
+    public void setDocList(ArrayList<Integer> docList) {
+        this.docList = docList;
+    }
+
+    public ArrayList<TrieNode> getChildren() {
+        return children;
+    }
+
+    public void setChildren(ArrayList<TrieNode> children) {
+        this.children = children;
+    }
+
+    public ArrayList<ArrayList<String>> getEdges() {
+        return edges;
+    }
+
+    public void setEdges(ArrayList<ArrayList<String>> edges) {
+        this.edges = edges;
     }
 
     public void addNewDoc(int i) {

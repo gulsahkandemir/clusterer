@@ -132,8 +132,8 @@ public class Main {
 //        
         // Print final list
         System.out.println("SORTED CLUSTERS--------------------------");
-        for(int i=0;i<clusterer.finalList.size();i++){
-            System.out.println((clusterer.finalList.get(i).toString()));
+        for(int i=0;i<clusterer.getFinalList().size();i++){
+            System.out.println((clusterer.getFinalList().get(i).toString()));
         }
         System.out.println("----------------------------------------");
 
@@ -143,14 +143,14 @@ public class Main {
          * in a clustered groups
          */
         System.out.println("CLUSTERS AND CONTENTS-------------------------");
-        for(int i=0;i<clusterer.finalList.size();i++ ){
+        for(int i=0;i<clusterer.getFinalList().size();i++ ){
            System.out.print(i + " the cluster keywords: ");
-           for(Integer clusterId : clusterer.finalList.get(i)){
-               System.out.print(clusterer.baseClusters.get(clusterId).name + ", ");
+           for(Integer clusterId : clusterer.getFinalList().get(i)){
+               System.out.print(clusterer.getBaseClusters().get(clusterId).getName() + ", ");
             }
 
-           for(Integer clusterId : clusterer.finalList.get(i)){
-               for(Integer resultId : clusterer.baseClusters.get(clusterId).docList){
+           for(Integer clusterId : clusterer.getFinalList().get(i)){
+               for(Integer resultId : clusterer.getBaseClusters().get(clusterId).getDocList()){
                 System.out.println("\t Url: " + snipArray.get(resultId).getUrl());
                 System.out.println("\t Description: " + snipArray.get(resultId).getDescription());
 
@@ -179,14 +179,5 @@ public class Main {
             snipArray.add(newSnippet);
 
         }  
-//
-//        for (int i = 0; i < tempSnipArray.size(); i++) {
-//            String[] tempSplitted = tempSnipArray.get(i).toLowerCase().replaceAll("[^A-Za-z ]", "").split(" ");
-//            ArrayList<String> tempOrigWords = new ArrayList<String>(Arrays.asList(tempSplitted));
-//
-//            Snippet newSnippet = new Snippet();
-//            newSnippet.setOrigWords((ArrayList<String>) tempOrigWords.clone());
-//            snipArray.add(newSnippet);
-//        }
     }
 }
