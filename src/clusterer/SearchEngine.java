@@ -4,6 +4,9 @@
  */
 package clusterer;
 
+import java.util.ArrayList;
+import org.json.JSONObject;
+
 /**
  *
  * @author gulsah
@@ -15,7 +18,12 @@ public abstract class SearchEngine {
         this.type = type;
     }
 
-    abstract String search(String queryWord); 
+    public abstract ArrayList<Snippet> search(String queryWord); 
+    
+//    public ArrayList<Snippet> searchAndParse(String queryWord){
+//        JSONObject resultJSON = search(queryWord);
+//        return parseResult(resultJSON);
+//    }
     
     public SearchEngineType getType() {
         return type;

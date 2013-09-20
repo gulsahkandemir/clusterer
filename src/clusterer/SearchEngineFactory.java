@@ -9,11 +9,14 @@ package clusterer;
  * @author gulsah
  */
 public class SearchEngineFactory {
-    public static SearchEngine startEngine(SearchEngineType type){
+    public static SearchEngine createEngine(SearchEngineType type){
         SearchEngine engine = null;
         switch(type){
             case BING:
-                engine =  new Bing();
+                engine =  new BingSearchEngine();
+                break;
+            case GOOGLE:
+                engine = new GoogleSearchEngine();
                 break;
             default:
                 break;

@@ -30,10 +30,7 @@ import org.json.JSONObject;
  */
 public class Main {
 
-    //git test
-    static boolean isSnippet = false;
-    static ArrayList<String> tempSnipArray = new ArrayList<String>();
-    public static ArrayList<Snippet> snipArray = new ArrayList<Snippet>();
+    public static ArrayList<Snippet> snipArray;
 
     /**
      * @param args the command line arguments
@@ -41,15 +38,16 @@ public class Main {
     public static void main(String[] args) throws IOException, BadLocationException {
         try {
             //Get the desired SearchEngine instance from the args[0] parameter.
-            SearchEngine searchEngine =  SearchEngineFactory.startEngine(SearchEngineType.valueOf(args[0]));
+            SearchEngine searchEngine =  SearchEngineFactory.createEngine(SearchEngineType.valueOf(args[0]));
             
             //Get the search result of thw query
-            String searchResult = searchEngine.search(args[1]);
-            
-            JSONObject jsonObject = new JSONObject(searchResult);
-           
-            parseResult(jsonObject);
-
+            snipArray = searchEngine.search(args[1]);
+             /** 
+             * DEBUG : Print the list of stemmed words
+             */
+//            for (int i = 0; i < snipArray.size(); i++) {
+//                System.out.println(i + "   " + snipArray.get(i).getDescription());
+//            }
             /*
              * Start stemming
              *
@@ -143,26 +141,9 @@ public class Main {
             }
 
         }
-
-
-        } catch (MalformedURLException ex) {
+        } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-    }
-
-    private static void parseResult(JSONObject resultObject) throws FileNotFoundException, IOException {
-        
-        JSONArray resultArray = resultObject.getJSONObject("d").getJSONArray("results");
-        
-        for(int i=0; i<resultArray.length(); i++){
-            String description = resultArray.getJSONObject(i).get("Description").toString();
-            String url = resultArray.getJSONObject(i).get("Url").toString();
-            String[] tempSplitted = description.toLowerCase().replaceAll("[^A-Za-z ]", "").split(" ");
-            ArrayList<String> tempOrigWords = new ArrayList<String>(Arrays.asList(tempSplitted));
-            Snippet newSnippet = new Snippet(tempOrigWords, url, description);
-            snipArray.add(newSnippet);
-
-        }  
     }
 }
