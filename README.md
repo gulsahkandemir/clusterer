@@ -1,4 +1,4 @@
-clusterer
+Clusterer
 =========
 
 The aim of this project is to cluster the search results of a given search engine(e.g. BING, GOOGLE)
